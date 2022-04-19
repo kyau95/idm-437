@@ -1,0 +1,16 @@
+{
+  "name": "idm-437",
+  "author": {
+    "name": "Kevin Yau",
+    "email": "ykevin1@umbc.edu"
+  },
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^18.0.2"
+  }
+}

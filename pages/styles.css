@@ -1,0 +1,17 @@
+#title {
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.break {
+  width: 100%;
+  height: 0;
+}
