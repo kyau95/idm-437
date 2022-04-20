@@ -5,7 +5,7 @@
     "email": "ykevin1@umbc.edu"
   },
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "./src/main.js",
   "license": "MIT",
   "scripts": {
     "start": "electron ."
