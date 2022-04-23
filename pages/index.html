@@ -4,21 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <title>IDM</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link href="../assets/fontawesome/all.css" rel="stylesheet" href="">
 </head>
 
 <body>
-  <div class="container">
+  <header>
     <h1 id="title">Indecisive Decision Maker</h1>
-    <div class="options">
-      <button id="add">Add Option</button>
-      <button id="remove-btn">Remove Option</button>
-      <button id="view-btn">View All Options</button>
-      <button id="ask-btn">Ask a Question Now</button>
+    <h2 id="help" onclick="startTutorial()">
+      Help <i class="fa-regular fa-circle-question"></i>
+    </h2>
+  </header>
+
+  <div id="tutorial-modal">
+    <div class="tutorial-header">
+      <span class="close"><i class="fa-solid fa-xmark"></i></span>
+      <h1>Modal Header</h1>
+    </div>
+    <div class="tutorial-body">
+
+    </div>
+    <div class="tutorial-footer">
+
     </div>
   </div>
+
+  <main>
+    <div class="categories">
+      <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+      <input name="search" id="search" type="text" placeholder="Search" />
+      <div id="selection-box"></div>
+    </div>
+
+    <div class="opt-container">
+      <div class="opt-card">
+        <a href="#" class="opt">Add Option</a>
+      </div>
+      <div class="opt-card">
+        <a href="#" class="opt">Remove Option</a>
+      </div>
+      <div class="opt-card">
+        <a href="#" class="opt">View All</a>
+      </div>
+      <div class="opt-card">
+        <a href="#" class="opt">Make Selection</a>
+      </div>
+    </div>
+  </main>
 
   <script src="../src/renderer.js"></script>
 </body>
