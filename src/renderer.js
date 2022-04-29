@@ -1,10 +1,28 @@
-// Needed splash screen to pass JSON data in
-function startMain() {
-  const mainContent = document.getElementById("main-content");
-  const splashScreen = document.getElementById("splash");
-  splashScreen.style.display = "none";
-  mainContent.style.display = "flex";
+// 
+
+// Fetch the user's settings
+let userSettings;
+async function getUserData() {
+  await fetch("../resources/options.json")
+    .then((res) => {
+      return res.json()
+    })
+    .then((data) => {
+      userSettings = data;
+    });
 }
+
+// Populates the selection box based on 
+// if the user has pre-existing categories
+async function populateSelections() {
+  await getUserData();
+  const selectionBox = document.getElementById("selection-box");
+  if (userSettings["categories"].length == 0) {
+    selectionBox.innerHTML = "Add a new category"
+  }
+}
+
+// populateSelections();
 
 // Event listener for the tutorial icon
 function startTutorial() {

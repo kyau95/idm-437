@@ -19,13 +19,6 @@ if (!fs.existsSync(USER_SETTINGS_FP)) {
   }
 }
 
-let userSettings = fs.readFile(USER_SETTINGS_FP, "utf-8", (err, data) => {
-  if (err) {
-    console.error(`${err.message}`);
-    return;
-  }
-});
-
 var win;
 const createWindow = () => {
   win = new BrowserWindow({
@@ -38,10 +31,6 @@ const createWindow = () => {
   });
   win.loadFile('./pages/index.html');
 }
-
-ipcMain.on("switch-to-main", () => {
-  return userSettings;
-})
 
 // Launch app
 app.whenReady().then(() => {

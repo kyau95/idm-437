@@ -9,11 +9,8 @@
 </head>
 
 <body>
-  <div id="splash" onclick="startMain()">
-    <h1 id="splash-title">Indecisive Decision Maker</h1>
-    <h2 id="subtitle">Click anywhere to start...</h2>
   </div>
-  
+
   <div id="main-content">
     <header>
       <h1 id="title">Indecisive Decision Maker</h1>
@@ -36,11 +33,14 @@
     </div>
 
     <main>
-      <div class="categories">
+      <div class="category-container">
         <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
         <input name="search" id="search" type="text" placeholder="Search" />
         <div id="selection-box">
-
+          <span class="category-opt">
+            <input type="text" placeholder="Type name of category">
+            <button class="category-add-btn" onclick=""><i class="fa-solid fa-plus"></i></button>
+          </span>
         </div>
       </div>
 
@@ -59,9 +59,7 @@
         </div>
       </div>
     </main>
-
-  </div>
-  <script src="../src/renderer.js"></script>
+    <script src="../src/renderer.js"></script>
 </body>
 
 </html>
